@@ -6,7 +6,7 @@
 }
 
 header{
-
+  
     height: 200px;
     border-bottom: 1px solid black;
 }
@@ -54,164 +54,120 @@ header{
 }
 
 .content{
-    height: 150px;
-    background-color: #ffffff;
-    display: grid;
-    grid-template-columns: repeat(2,50%);
+    background-color: #bfccca;
 }
 
-.logo{
-
- display: flex;
- justify-content: center;
- align-items: center;
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+.content{
+    height: 300px;
+}
 
-.content > .logo >img{
-  
+.logo img {
     width: 250px;
-    width: 500px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #274F4E;
+    font-weight: 400;
     
 }
 
-.nav {
-    max-width: 1280px;
-    height: 70px;
-    margin-inline: auto;
-  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 48px;
-  }
-
-.menu{
+.login-button{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-  
-nav{
-    display: flex;
-    
+
 }
 
-  .nav-list {
-    display: flex;
-
-    
-    gap: 32px;
-    list-style: none;
-  }
-  
-  .nav-list a {
-    
-    font-size: 30px;
-    color: #000000;
-    padding-block: 16px;
-  }
-  
-  .hero {
-    height: calc(100vh - 70px);
-    background: center / cover no-repeat url("./bg.jpg");
-  }
-  
-  .hamburger {
-    display: none;
+.login-button button {
     border: none;
-    background: none;
-    border-top: 5px solid #ffffff;
-    cursor: pointer;
-  }
-  
-  .hamburger::after,
-  .hamburger::before {
-    content: " ";
-    display: block;
-    width: 30px;
-    height: 5px;
-    background: #fff;
-    margin-top: 5px;
-    position: relative;
-    transition: 0.3s;
-  }
-  
-  @media (max-width: 1300px) {
-    .hamburger {
-      display: block;
-      z-index: 1;
-    }
-  
-    .nav-list {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: #229485;
-      clip-path: circle(500px at 90% -15%);
-      transition: 1s ease-out;
-  
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      gap: 0;
-  
-      pointer-events: none;
-    }
-  
-    .nav-list a {
-      font-size: 24px;
-      opacity: 0;
-    }
-  
-    .nav-list li:nth-child(1) a {
-      transition: 0.5s 0.2s;
-    }
-  
-    .nav-list li:nth-child(2) a {
-      transition: 0.5s 0.4s;
-    }
-  
-    .nav-list li:nth-child(3) a {
-      transition: 0.5s 0.6s;
-    }
-  
-    /* Estilos ativos */
-  
-    .nav.active .nav-list {
-      clip-path: circle(1000px at 90% -15%);
-      pointer-events: all;
-    }
-  
-    .nav.active .nav-list a {
-      opacity: 1;
-    }
-  
-    .nav.active .hamburger {
-      position: fixed;
-      top: 26px;
-      right: 16px;
-      border-top-color: transparent;
-    }
-  
-    .nav.active .hamburger::before {
-      transform: rotate(135deg);
-    }
-  
-    .nav.active .hamburger::after {
-      transform: rotate(-135deg);
-      top: -7px;
-    }
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #0187a7;
+    
+}
 
-    .carrosel{
+.login-button button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 1139px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+    .nav-item {
         display: none;
     }
-  }
+    .login-button {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+    .open {
+        display: block;
+    }
+}
+
 
 main{
     height: 100vh;
