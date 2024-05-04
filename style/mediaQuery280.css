@@ -1,0 +1,39 @@
+@media screen and (max-width: 400px){
+    .redes-sociais{
+        height: 50px;
+        background-color: #85aaa9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .QuemSomos{
+        height: 1350px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer{
+        height: 350px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    iframe{
+        display: none;
+    }
+
+    footer .parte1 > img{
+        width: 250px;   
+    }
+
+    footer .parte2 > .redes-footer{
+       height: 80px;
+       
+    }
+        
+}
